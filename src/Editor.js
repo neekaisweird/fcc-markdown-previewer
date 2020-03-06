@@ -1,9 +1,12 @@
 import React from 'react';
+import './Editor.css';
 
 const Editor = ({ text, updateText }) => {
   return (
     <div className="Editor">
-      <label htmlFor="editor">Editor</label>
+      <h1 className="title">
+        <label htmlFor="editor">Editor</label>
+      </h1>
       <textarea
         onChange={updateText}
         value={text}

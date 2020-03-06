@@ -1,11 +1,16 @@
 import React from 'react';
 import marked from 'marked';
+import './Previewer.css';
+
+marked.setOptions({
+  breaks: true
+});
 
 const Previewer = ({ text }) => {
   return (
     <div className="Previewer">
-      <h1>Previewer</h1>
-      <div dangerouslySetInnerHTML={{ __html: marked(text) }}></div>
+      <h1 className="title">Previewer</h1>
+      <div id="preview" dangerouslySetInnerHTML={{ __html: marked(text) }} />
     </div>
   );
 };
